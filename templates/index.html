@@ -1,0 +1,37 @@
+{% extends 'layout.html' %} {% load static %} {% block title %} home-page
+{%endblock %} {% block contant %}
+
+<div>
+  <div
+    class="home d-flex justify-content-center align-items-center"
+    style="
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('static/home.jpg');
+    "
+  >
+    <div class="inner text-light text-center">
+      <h3 class="text-warning">{{welcome.title}}</h3>
+      <div class="div" style="width:40%; margin:auto;">
+        <h4>
+          {{welcome.description}}
+        </h4>
+      </div>
+      <a href="#" class="btn btn-primary">Learn more..</a>
+    </div>
+  </div>
+</div>
+<div
+  class="label bg-warning d-flex justify-content-center align-items-center"
+  id="service"
+>
+  <h3 class="u"><u style="color: white">Our services</u></h3>
+</div>
+{% include 'partials/service.html' %}
+<div
+  class="label bg-warning d-flex justify-content-center align-items-center"
+  id="service"
+>
+  <h3 class="u"><u style="color: white">Our clients</u></h3>
+</div>
+{% include 'partials/client.html' %}
+ {% endblock %}
